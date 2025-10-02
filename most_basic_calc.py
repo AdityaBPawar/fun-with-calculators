@@ -5,7 +5,7 @@ def sub(a, b):
 def mul(a, b):
     return a * b
 def div(a, b):
-    if y == 0:
+    if b == 0:
         return "Error! Division by zero."
     return a / b
 
