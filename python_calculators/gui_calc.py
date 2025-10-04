@@ -59,6 +59,19 @@ operator = None
 def button_clicked(value):
     global right_symbols,top_symbols,label,operator,A,B
 
+    if value in right_symbols:
+        pass
+    elif value in top_symbols:
+        pass
+    else:
+        if value == ".":
+            pass
+        elif value in "0123456789":
+            if label["text"] == "0":
+                label["text"] = value
+            else:
+                label["text"] = label["text"] + value
+
 #centre the window
 window.update()
 window_width=window.winfo_width()
