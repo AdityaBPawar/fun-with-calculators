@@ -30,7 +30,7 @@ frame = tk.Frame(window)
 
 #watch the label color
 label = tk.Label(frame, text="0", font=("Arial", 45), background=lavender, foreground=linen,
-                 anchor="e")
+                 anchor="e", width=column_count)
 
 label.grid(column=0, row=0, columnspan=column_count, sticky="we")
 
