@@ -70,7 +70,7 @@ def button_clicked(value):
             if label["text"] == "0":
                 label["text"] = value
             else:
-                label["text"] = label["text"] + value
+                label["text"] += value
 
 #centre the window
 window.update()
