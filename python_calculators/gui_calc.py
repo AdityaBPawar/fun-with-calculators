@@ -55,7 +55,7 @@ frame.pack()
 #A, B and Operator defined
 A = "0"
 B = None
-operator = None
+Operator = None
 
 def clear_all():
     global A, B, operator
