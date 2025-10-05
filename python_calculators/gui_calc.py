@@ -62,6 +62,11 @@ def clear_all():
     B = None
     operator = None
 
+def remove_zero_after_decimal(number):
+    if number % 1 == 0
+        number = int(number)
+    return str(number)
+
 def button_clicked(value):
     global right_symbols,top_symbols,label,operator,A,B
 
