@@ -73,7 +73,7 @@ def button_clicked(value):
 
     if value in right_symbols:
         if value == "=":
-            if A is not None and operator is not None:
+            if A is not None and Operator is not None:
                 B = label["text"]
                 numA = float(A)
                 numB = float(B)
