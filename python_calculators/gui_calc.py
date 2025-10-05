@@ -63,7 +63,7 @@ def clear_all():
     operator = None
 
 def remove_zero_after_decimal(number):
-    if number % 1 == 0
+    if number % 1 == 0:
         number = int(number)
     return str(number)
 
