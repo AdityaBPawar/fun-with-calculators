@@ -61,7 +61,7 @@ def clear_all():
     global A, B, Operator
     A = "0"
     B = None
-    operator = None
+    Operator = None
 
 def remove_zero_after_decimal(number):
     if number % 1 == 0:
