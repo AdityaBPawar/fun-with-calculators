@@ -56,6 +56,12 @@ A = "0"
 B = None
 operator = None
 
+def clear_all():
+    global A, B, operator
+    A = ""
+    B = None
+    operator = None
+
 def button_clicked(value):
     global right_symbols,top_symbols,label,operator,A,B
 
