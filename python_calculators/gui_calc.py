@@ -58,7 +58,7 @@ operator = None
 
 def clear_all():
     global A, B, operator
-    A = ""
+    A = "0"
     B = None
     operator = None
 
