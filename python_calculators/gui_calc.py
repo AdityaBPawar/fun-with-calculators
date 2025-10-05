@@ -73,7 +73,15 @@ def button_clicked(value):
     if value in right_symbols:
         pass
     elif value in top_symbols:
-        pass
+        if value == "AC":
+            clear_all()
+            label["text"] = "0"
+        elif value == "+/-":
+            result = float(label["text"])*-1
+            label["text"] = remove_zero_after_decimal(result)
+        elif value == "%":
+            result = float(label["text"]) / 100
+            label["text"] = remove_zero_after_decimal(result)
     else:
         if value == ".":
             if value not in label["text"]:
