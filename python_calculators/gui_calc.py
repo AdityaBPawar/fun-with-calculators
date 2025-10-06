@@ -94,7 +94,7 @@ def button_clicked(value):
                 label["text"] = "0"
                 B="0"
 
-            operator = value
+            Operator = value
 
     elif value in top_symbols:
         if value == "AC":
