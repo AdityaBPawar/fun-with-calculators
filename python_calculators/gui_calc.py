@@ -69,7 +69,7 @@ def remove_zero_after_decimal(number):
     return str(number)
 
 def button_clicked(value):
-    global right_symbols,top_symbols,label,operator,A,B
+    global right_symbols,top_symbols,label,A,B, Operator
 
     if value in right_symbols:
         if value == "=":
