@@ -116,6 +116,41 @@ def button_clicked(value):
             else:
                 label["text"] += value
 
+#window for the calculator
+window = tk.Tk()
+window.title("Calculator")
+window.resizable(False, False)
+
+frame = tk.Frame(window)
+
+#watch the label color
+label = tk.Label(frame, text="0", font=("Arial", 45), background=lavender, foreground=linen,
+                 anchor="e", width=column_count)
+
+label.grid(column=0, row=0, columnspan=column_count, sticky="we")
+
+for row in range(row_count):
+    for column in range(column_count):
+        value = button_values[row][column]
+        button = tk.Button(frame, text=value, font=("Arial",30),
+                           width=column_count-1, height=1,
+                           command=lambda value=value: button_clicked(value))
+        if value in top_symbols:
+            button.config(foreground=lavender,background=lemon)
+        elif value in right_symbols:
+            button.config(foreground=lavender,background=tan)
+        else:
+            button.config(foreground=lavender, background=blue)
+
+        button.grid(row=row+1, column=column, sticky="nsew", padx=2, pady=2)
+
+for i in range(row_count + 1):
+    frame.rowconfigure(i, weight=1)
+for j in range(column_count):
+    frame.columnconfigure(j, weight=1)
+
+frame.pack()
+
 #centre the window
 window.update()
 window_width=window.winfo_width()
