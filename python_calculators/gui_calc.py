@@ -22,8 +22,6 @@ lemon="#F7E7BA"
 tan="#F9D7B7"
 blue="#A5D5DA"
 
-
-
 #A, B and operator defined
 A = "0"
 B = None
@@ -121,11 +119,23 @@ for row in range(row_count):
                            width=column_count-1, height=1,
                            command=lambda value=value: button_clicked(value))
         if value in top_symbols:
-            button.config(foreground=lavender,background=lemon)
+            button.config(foreground=lavender,
+                  background=lemon,
+                  activebackground=tan,
+                  highlightbackground=lemon,
+                  bd=0)
         elif value in right_symbols:
-            button.config(foreground=lavender,background=tan)
+            button.config(foreground=lavender,
+                  background=tan,
+                  activebackground=blue,
+                  highlightbackground=tan,
+                  bd=0)
         else:
-            button.config(foreground=lavender, background=blue)
+            button.config(foreground=lavender,
+                  background=blue,
+                  activebackground=tan,
+                  highlightbackground=blue,
+                  bd=0)
 
         button.grid(row=row+1, column=column, sticky="nsew", padx=2, pady=2)
 
