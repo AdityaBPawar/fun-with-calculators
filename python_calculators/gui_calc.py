@@ -22,46 +22,18 @@ lemon="#F7E7BA"
 tan="#F9D7B7"
 blue="#A5D5DA"
 
-#window for the calculator
-window = tk.Tk()
-window.title("Calculator")
-window.resizable(False, False)
 
-frame = tk.Frame(window)
 
-#watch the label color
-label = tk.Label(frame, text="0", font=("Arial", 45), background=lavender, foreground=linen,
-                 anchor="e", width=column_count)
-
-label.grid(column=0, row=0, columnspan=column_count, sticky="we")
-
-for row in range(row_count):
-    for column in range(column_count):
-        value = button_values[row][column]
-        button = tk.Button(frame, text=value, font=("Arial",30),
-                           width=column_count-1, height=1,
-                           command=lambda value=value: button_clicked(value))
-        if value in top_symbols:
-            button.config(foreground=lavender,background=lemon)
-        elif value in right_symbols:
-            button.config(foreground=lavender,background=tan)
-        else:
-            button.config(foreground=lavender, background=blue)
-
-        button.grid(row=row+1, column=column)
-
-frame.pack()
-
-#A, B and Operator defined
+#A, B and operator defined
 A = "0"
 B = None
-Operator = None
+operator = None
 
 def clear_all():
-    global A, B, Operator
+    global A, B, operator
     A = "0"
     B = None
-    Operator = None
+    operator = None
 
 def remove_zero_after_decimal(number):
     if number % 1 == 0:
@@ -69,11 +41,11 @@ def remove_zero_after_decimal(number):
     return str(number)
 
 def button_clicked(value):
-    global right_symbols,top_symbols,label,A,B, Operator
+    global right_symbols,top_symbols,label,A,B, operator
 
     if value in right_symbols:
         if value == "=":
-            if A is not None and Operator is not None:
+            if A is not None and operator is not None:
                 B = label["text"]
                 numA = float(A)
                 numB = float(B)
@@ -89,12 +61,12 @@ def button_clicked(value):
 
                 clear_all()
         elif value in "+-×÷":
-            if Operator is None:
+            if operator is None:
                 A = label["text"]
                 label["text"] = "0"
                 B="0"
 
-            Operator = value
+            operator = value
 
     elif value in top_symbols:
         if value == "AC":
