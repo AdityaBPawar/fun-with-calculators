@@ -89,7 +89,7 @@ def button_clicked(value):
 
                 clear_all()
         elif value in "+-×÷":
-            if operator is None:
+            if Operator is None:
                 A = label["text"]
                 label["text"] = "0"
                 B="0"
