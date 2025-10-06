@@ -87,6 +87,19 @@ def button_clicked(value):
                 label["text"] = value
             else:
                 label["text"] += value
+        elif value == "√":
+            # Compute square root of current display
+            try:
+                num = float(label["text"])
+                if num < 0:
+                    label["text"] = "Error"  # negative numbers can't be sqrt
+                else:
+                    result = math.sqrt(num)
+                    label["text"] = remove_zero_after_decimal(result)
+                    # Optional: update A for chaining operations
+                    A = label["text"]
+            except:
+                label["text"] = "Error"
 
 #window for the calculator
 window = tk.Tk()
