@@ -1,6 +1,6 @@
-Fun With Calculators
+Fun With basic_calculator
 
-Welcome to Fun With Calculators, a personal project where I explore programming by building a variety of calculators. The idea is simple: start with the most basic calculators and gradually build more advanced ones, learning new programming concepts and languages along the way.
+Welcome to Fun With basic_calculator, a personal project where I explore programming by building a variety of calculators. The idea is simple: start with the most basic calculators and gradually build more advanced ones, learning new programming concepts and languages along the way.
 
 This project demonstrates my curiosity, coding growth, and ability to implement real-world functionality in Python (and potentially other languages in the future).
 
