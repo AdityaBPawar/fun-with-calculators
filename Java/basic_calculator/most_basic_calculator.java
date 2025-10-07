@@ -12,6 +12,32 @@ public class most_basic_calculator {
         System.out.println("4. Division");
 
         int num = sc.nextInt();
+
+        System.out.println("Enter the first number: ");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number: ");
+        int b = sc.nextInt();
+
+        double result = 0;
+
+        if (num == 1){
+            result = addition(a,b);
+            }
+        else if (num == 2){
+            result = subtraction(a,b);
+        }
+        else if (num == 3){
+            result =multiplication(a,b);
+        }
+        else if (num == 4){
+            result = division(a,b);
+        }
+        else {
+            System.out.println("Invalid input!");
+        }
+        System.out.println("The result is: " + result);
+
+        sc.close();
     }
 
     public static int addition(int a, int b) {
