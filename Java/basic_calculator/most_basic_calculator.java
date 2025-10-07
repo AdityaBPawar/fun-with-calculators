@@ -25,7 +25,7 @@ public class most_basic_calculator {
     public static int multiplication(int a, int b) {
         return a * b;
     }
-    public static int division(int a, int b) {
+    public static double division(int a, int b) {
         return a / b;
     }
 }
