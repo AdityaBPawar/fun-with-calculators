@@ -28,6 +28,6 @@ public class most_basic_calculator {
             System.out.println("Error! Division by Zero!");
             return 0;
         }
-        return a / b;
+        return (double) a / b;
     }
 }
