@@ -24,6 +24,10 @@ public class most_basic_calculator {
         return a * b;
     }
     public static double division(int a, int b) {
+        if (b == 0) {
+            System.out.println("Error! Division by Zero!");
+            return 0;
+        }
         return a / b;
     }
 }
