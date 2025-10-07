@@ -12,8 +12,6 @@ public class most_basic_calculator {
         System.out.println("4. Division");
 
         int num = sc.nextInt();
-
-        sc.close();
     }
 
     public static int addition(int a, int b) {
