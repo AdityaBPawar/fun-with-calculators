@@ -43,5 +43,9 @@ public class calculator {
       displaylabel.setHorizontalAlignment(JLabel.RIGHT);
       displaylabel.setText("0");
       displaylabel.setOpaque(true);
+
+      displaypanel.setLayout(new BorderLayout());
+      displaypanel.add(displaylabel);
+      frame.add(displaypanel, BorderLayout.NORTH);
     }
 }
