@@ -15,6 +15,16 @@ public class calculator {
     Color yellow = new Color(255, 255, 153);
     Color turquoise = new Color(43, 217, 198);
 
+    String[] buttonValues = {
+            "AC", "+/-", "%", "÷",
+            "7", "8", "9", "×",
+            "4", "5", "6", "-",
+            "1", "2", "3", "+",
+            "0", ".", "√", "="
+    };
+    String[] rightSymbols = {"÷", "×", "-", "+", "="};
+    String[] topSymbols = {"AC", "+/-", "%"};
+
     JFrame frame =  new JFrame("Calculator");
     JLabel displaylabel = new JLabel();
     JPanel displaypanel = new JPanel();
