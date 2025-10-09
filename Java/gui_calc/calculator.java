@@ -16,6 +16,8 @@ public class calculator {
     Color turquoise = new Color(43, 217, 198);
 
     JFrame frame =  new JFrame("Calculator");
+    JLabel displaylabel = new JLabel();
+    JPanel displaypanel = new JPanel();
 
     calculator(){
       frame.setVisible(true);
