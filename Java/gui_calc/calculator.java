@@ -26,5 +26,12 @@ public class calculator {
       frame.setResizable(false);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setLayout(new BorderLayout());
+
+      displaylabel.setBackground(turquoise);
+      displaylabel.setForeground(yellow);
+      displaylabel.setFont(new Font("Arial", Font.PLAIN, 80));
+      displaylabel.setHorizontalAlignment(JLabel.RIGHT);
+      displaylabel.setText("0");
+      displaylabel.setOpaque(true);
     }
 }
