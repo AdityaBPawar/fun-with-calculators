@@ -47,5 +47,9 @@ public class calculator {
       displaypanel.setLayout(new BorderLayout());
       displaypanel.add(displaylabel);
       frame.add(displaypanel, BorderLayout.NORTH);
+
+      buttonpanel.setLayout(new GridLayout(5,4));
+      buttonpanel.setBackground(pink);
+      frame.add(buttonpanel);
     }
 }
