@@ -51,5 +51,13 @@ public class calculator {
       buttonpanel.setLayout(new GridLayout(5,4));
       buttonpanel.setBackground(pink);
       frame.add(buttonpanel);
+
+      for (int i = 0; i < buttonValues.length; i++) {
+          JButton button = new JButton();
+          String buttonValue = buttonValues[i];
+          button.setFont(new Font("Arial", Font.PLAIN, 30));
+          button.setText(buttonValue);
+          buttonpanel.add(button);
+      }
     }
 }
