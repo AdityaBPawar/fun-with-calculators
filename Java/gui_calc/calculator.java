@@ -58,6 +58,18 @@ public class calculator {
           String buttonValue = buttonValues[i];
           button.setFont(new Font("Arial", Font.PLAIN, 30));
           button.setText(buttonValue);
+          if (Arrays.asList(topSymbols).contains(buttonValue)){
+              button.setBackground(turquoise);
+              button.setForeground(lilac);
+          }
+          else if (Arrays.asList(rightSymbols).contains(buttonValue)){
+              button.setBackground(yellow);
+              button.setForeground(lilac);
+          }
+          else {
+              button.setBackground(lilac);
+              button.setForeground(lilac);
+          }
           buttonpanel.add(button);
       }
     }
