@@ -30,6 +30,10 @@ public class calculator {
     JPanel displaypanel = new JPanel();
     JPanel buttonpanel = new JPanel();
 
+    String A = "0";
+    String B = null;
+    String operator = null;
+
     calculator(){
       frame.setVisible(true);
       frame.setSize(windowwidth, windowheight);
