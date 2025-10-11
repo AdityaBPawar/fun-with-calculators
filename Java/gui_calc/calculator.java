@@ -77,4 +77,9 @@ public class calculator {
           buttonpanel.add(button);
       }
     }
+    void clearAll(){
+        String A = "0";
+        String B = null;
+        String operator = null;
+    }
 }
