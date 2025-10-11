@@ -75,6 +75,59 @@ public class calculator {
               button.setForeground(lilac);
           }
           buttonpanel.add(button);
+
+          button.addActionListener(new ActionListener() {
+              public void actionPerformed(ActionEvent e) {
+                  JButton button = (JButton) e.getSource();
+                  String buttonValue = button.getText();
+                  if (Arrays.asList(rightSymbols).contains(buttonValue)){
+                      if (buttonValue == "="){
+
+                      }
+                      else if  (buttonValue == "+-×÷"){
+                          if (operator == null){
+                              A = displaylabel.getText();
+                              displaylabel.setText("0");
+                              B = "0";
+                          }
+                          operator = buttonValue;
+                      }
+                  }
+                  else if (Arrays.asList(topSymbols).contains(buttonValue)){
+                      if (buttonValue == "AC"){
+                          clearAll();
+                          displaylabel.setText("0");
+                      }
+                      else if (buttonValue == "+/-"){
+                          double numDisplay =  Double.parseDouble(displaylabel.getText());
+                          numDisplay *= -1;
+                          displaylabel.setText(removeZeroDecimal(numDisplay));
+                      }
+                      else if (buttonValue == "%"){
+                          double numDisplay =  Double.parseDouble(displaylabel.getText());
+                          numDisplay /= 100;
+                          displaylabel.setText(removeZeroDecimal(numDisplay));
+                      }
+                  }
+                  else {
+                      if (buttonValue == "."){
+                          if (!displaylabel.getText().contains(buttonValue)){
+                              displaylabel.setText(displaylabel.getText() + buttonValue);
+                          }
+                      }
+                      else if ("0123456789".contains(buttonValue)){
+                          if (displaylabel.getText() == "0") {
+                              displaylabel.setText(buttonValue);
+                          }
+                          else {
+                              displaylabel.setText(displaylabel.getText() + buttonValue);
+                          }
+                      }
+
+                  }
+              }
+          });
+          frame.setVisible(true);
       }
     }
     void clearAll(){
