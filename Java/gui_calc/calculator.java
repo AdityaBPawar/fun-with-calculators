@@ -35,7 +35,7 @@ public class calculator {
     String operator = null;
 
     calculator(){
-      frame.setVisible(true);
+      //frame.setVisible(true);
       frame.setSize(windowwidth, windowheight);
       frame.setLocationRelativeTo(null);
       frame.setResizable(false);
