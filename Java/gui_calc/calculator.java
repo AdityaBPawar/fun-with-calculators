@@ -82,4 +82,10 @@ public class calculator {
         String B = null;
         String operator = null;
     }
+    String removeZeroDecimal(double numDisplay){
+        if (numDisplay % 1 == 0){
+            return Integer.toString((int) numDisplay);
+        }
+        return Double.toString(numDisplay);
+    }
 }
